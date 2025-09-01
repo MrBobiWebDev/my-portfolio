@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta lang="ru">
+    <link rel="stylesheet" href="style.css">
     <title>Диана Палагашвили: Портфолио</title>
 </head>
 <body class="page-body">
@@ -12,19 +13,19 @@
             <nav class="navbar" id="main">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="intro">Главная</a>
+                    <a href="#intro">Главная</a>
                 </li>
-                <li>
-                    <a href="description">Обо мне</a>
+                <li class="nav-item">
+                    <a href="#description">Обо мне</a>
                 </li>
-                <li>
-                    <a href="skills">Навыки и стек</a>
+                <li class="nav-item">
+                    <a href="#skills">Навыки и стек</a>
                 </li>
-                <li>
-                    <a href="projects">Проекты</a>
+                <li class="nav-item">
+                    <a href="#projects">Проекты</a>
                 </li>
-                <li>
-                    <a href="contacts">Связаться со мной</a>
+                <li class="nav-item">
+                    <a href="#contacts">Связаться со мной</a>
                 </li>
             </ul>
         </nav>
@@ -33,34 +34,179 @@
 
     <main>
         <section class="intro" id="intro">
-
+            <div class="container">
+                <div class="intro-top">
+                    <h1>ДИАНА ПАЛАГАШВИЛИ</h1>
+                    <div class="intro-top-text-wtapper">
+                        <p>Короткая фраза про автора портфолио с самой важной информацией. Например: «Разрабатываю сайты-визитки 
+                            и рекламные лендинги».
+                        </p>
+                    </div>
+                </div>
+                <div class="intro-bottom">
+                    <div class="intro-bottom-image-wrapper">
+                        <img src="images/main.png" alt="ИИ-картинка: компьютер и анализ">
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="" id="description">
-
+        <section class="description" id="description">
+            <div class="container">
+                <div class="description-top">
+                    <h2>ПРИВЕТ, Я ВЕБ-РАЗРАБОТЧИК</h2>
+                    <p>Описание автора портфолио. Более подробный текст про вас, что вы делаете, какими проектами занимаетесь,
+                        какой у вас опыт в профессии.</p>
+                </div>
+                <div class="description-bottom">
+                    <div class="description-bottom-img-wrapper">
+                        <img src="images/photo.png" alt="моя фотография">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="skills" id="skills">
-
+            <h2>НАВЫКИ И СТЕК ТЕХНОЛОГИЙ</h2>
+            <table class="skills-table">
+                <tr>
+                    <th>Разработка сайтов</th>
+                    <th>Дизайн</th>
+                    <th>Soft skills</th>
+                </tr>
+                <tr>
+                    <td>Короткое общее описание навыков в разработке: фронтенд, бэкенд, базы данных, DevOps.</td>
+                    <td>Короткое общее описание навыков дизайна.</td>
+                    <td>Короткое общее описание софт скиллов. Умение работать в команде и пр.</td>
+                </tr>
+            </table>
         </section>
 
         <section class="projects" id="projects">
-
+            <div class="container">
+                <h2>ПРОЕКТЫ</h2>
+                <ul>
+                    <li class="projects-item">
+                        <article>
+                            <a href="">
+                                <img src="images/form.png" alt="">
+                            </a>
+                        </article>
+                    </li>
+                    <li class="projects-item">
+                        <article>
+                            <a href="">
+                                <img src="images/form.png" alt="">
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+                <div class="projects-button">
+                    <button>Посмотреть на Github</button>
+                </div>
+            </div>
         </section>
 
         <section class="contacts">
-
+            <div class="container">
+                <div class="contacts-top">
+                    <h2>Хотите заказать сайт?</h2>  
+                    <div class="contacts-top-wrapper">
+                        <p>Напишите мне, чтобы обсудить детали.</p>
+                    </div>
+                </div>
+                <div class="contacts-bottom">
+                    <div class="contacts-bottom-left">
+                        <img src="images/form.png" alt="Рабочее место">
+                    </div>
+                    <div class="contacts-bottom-right">
+                        <form action="#" method="post">
+                            <div class="contacts-form-top">
+                                <div class="contacts-form-top-name">
+                                    <label for="contacts-name">Имя</label><br>
+                                    <input type="text">
+                                </div>
+                                <div class="contacts-form-top-email">
+                                    <label for="contacts-email">E-mail</label><br>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="contacts-form-bottom">
+                                <label for="contacts-email">Расскажите про свою задачу</label><br>
+                                <input type="text">
+                            </div>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="reviews">
-
+            <div class="container">
+                <h2>ОТЗЫВЫ</h2>
+                <div class="reviews-text-wrapper">
+                    <p>Люди, с которыми я работала, остаются довольны результатом.</p>
+                </div>
+                <div class="reviews-item">
+                    <figure>
+                        <div class="reviews-item-image-wrapper">
+                            <img src="images/photo.png" alt="Фото рекомендателя">
+                        </div>
+                        <div class="reviews-item-text-wrapper">
+                            <p>«Текст отзыва»</p>
+                        </div>
+                        <figcaption class="reviewer-name">
+                            Имя Фамилия
+                        </figcaption>
+                        <figcaption class="reviews-company-town">
+                            Компания, город
+                        </figcaption>
+                    </figure>
+                    <div class="reviews-buttins">
+                        <button>Влево</button>
+                        <button>Вправо</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <footer>
+        <div class="footer-top">
+            <h4>Договоримся о сотрудничестве</h4>
+            <div class="footer-top-text-wrapper">
+                <p>У вас есть идея проекта или предложение о работе? Напишите мне. Я открыт(а) к разным вариантам сотрудничества.
+                </p>
+            </div>
+            <button>Связаться с разработчиком</button>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-icons">
+                <img src="icons/TG.svg" alt="Лого Телеграма">
+                <img src="icons/Habr.svg" alt="Лого Хабра">
+                <img src="icons/Email.svg" alt="Лого E-mail">
+            </div>
+            <div class="footer-bottom-images-authors">
+                <a href="https://ru.freepik.com/free-vector/
+                software-integration-conceptillustration_18352184.htm#page=2&query=вебразработка&position=7&from_view=search&track=sp h">Изображение-1 от Storyset на Freepik.</a> 
 
+                <a href="https://ru.freepik.com/free-vector/
+                code-typing-conceptillustration_10259340.htm#&position=12&from_vie w=author">Изображение-2 от Storyset на Freepik.</a> 
+
+                <a href="https://www.flaticon.com/ru/free- icons/html" title="html иконки">Иконка "Html" от Frey Wazza на Flaticon.</a> 
+
+                <a href="https://www.flaticon.com/ru/free- icons/" title="телеграмма иконки">Иконка «Телеграм» от Freepik на Flaticon.</a>
+
+                <a href="https://www.flaticon.com/ru/free- icons/" title="общение иконки">Иконка «Общение» от Ilham Fitrotul Hayat на Flaticon.</a> 
+
+                <a href="https://www.flaticon.com/ru/free- icons/-" title="Дизайн сайта иконки">Иконка «Дизайн сайта» от Freepik на Flaticon.</a> 
+
+                <a href="https://www.flaticon.com/ru/free- icons/-" title="Эл. адрес иконки">Иконка «Эл.адрес» от Those Icons на Flaticon.</a>
+            </div>
+        </div>
     </footer>
-    
+
 </body>
 </html>
