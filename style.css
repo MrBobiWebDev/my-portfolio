@@ -57,7 +57,7 @@
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     line-height: 1.4;
-    color: #000;
+    color: #1d2741;
     padding-top: 200px;
 }
 
@@ -125,4 +125,29 @@
 .nav-button:hover {
   background: #FF9235;
   color: white;
+}
+
+.intro-top {
+    text-align: center;
+}
+
+.intro-top h1 {
+    font-size: 56px;
+}
+
+.intro-top-text-wrapper {
+    font-size: 36px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.intro-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-image {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
 }
