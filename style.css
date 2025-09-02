@@ -47,10 +47,82 @@
     src: url(./fonts/TildaSans-Black.ttf) format("ttf");
 }
 
+.page {
+    height: 100%;
+}
+
 .page-body {
     min-height: 100%;
     margin: 0;
-    font-family: "Tilda Sans", sans-serif;
-    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
     line-height: 1.4;
+    color: #000;
+    padding-top: 200px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* чтобы быть поверх других элементов */
+  background-color: white; /* важно, чтобы не просвечивал контент снизу */
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* по желанию */
+}
+
+.navbar {
+  position: relative; /* чтобы позиционирование кнопки было относительно navbar */
+  display: flex;
+  justify-content: center; /* ставим ul по центру */
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 100px;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav-link:hover {
+    opacity: 0.5;
+}
+
+.nav-button {
+  position: absolute;
+  right: 40px;
+  top: 50%; /* Ставим по середине родителя */
+  transform: translateY(-50%); /* Центруем по оси Y */
+  right: 40px;
+  font-size: 25px;
+  padding: 10px 20px;
+  border: 2px solid #FF9235;
+  color: #FF9235;
+  border-radius: 15px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #FF9235;
+  color: white;
 }
