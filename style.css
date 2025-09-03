@@ -64,7 +64,8 @@
 .container {
     width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
     box-sizing: border-box;
 }
 
@@ -147,10 +148,9 @@
 }
 
 .intro-image {
-    max-width: 700px;
+    max-width: 650px;
     width: 100%;
     height: auto;
-    padding-bottom: 44px;
 }
 
 .description .container {
@@ -159,6 +159,7 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    padding-top: 0;
 }
 
 .description-top h2 {
@@ -171,7 +172,7 @@
     min-width: 100%;
     min-height: 550px;
     background-color: #5DD9C8;
-    padding-top: 20px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,7 +181,7 @@
 .description-top p {
     text-align: center;
     font-size: 36px;
-    max-width: 50%;
+    max-width: 1000px;
 }
 
 .description-bottom-image-wrapper {
@@ -199,4 +200,67 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.skills .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.skills h2 {
+    font-size: 56px;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #5DD9C8;
+    table-layout: fixed;
+}
+
+.skills-table th {
+    border: 1px solid #5DD9C8;
+    border-bottom: none;
+    padding-top: 60px;
+}
+
+.skills-table-description td{
+    padding: 0;
+    margin: 0;
+    padding: 0px 0 30px 0;
+}
+
+.skills-table th p {
+    font-size: 36px;
+}
+
+.skills-table td {
+    border: 1px solid #5DD9C8;
+    border-top: none;
+    border-bottom: none;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.skills-table-titles td {
+    color: #FF9235;
+    font-weight:600;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-table-values {
+    border: 1px solid #5DD9C8;
+    border-top: none;
+    border-bottom: none;
+}
+
+.skills-table-values ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 20px 0 40px 0;
 }
