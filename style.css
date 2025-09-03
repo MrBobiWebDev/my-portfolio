@@ -81,26 +81,26 @@
 }
 
 .navbar {
-  position: relative; /* чтобы позиционирование кнопки было относительно navbar */
-  display: flex;
-  justify-content: center; /* ставим ul по центру */
-  align-items: center;
+    position: relative; /* чтобы позиционирование кнопки было относительно navbar */
+    display: flex;
+    justify-content: center; /* ставим ul по центру */
+    align-items: center;
 }
 
 .nav-list {
-  display: flex;
-  gap: 100px;
+    display: flex;
+    gap: 100px;
 }
 
 .nav-item {
-  list-style: none;
+    list-style: none;
 }
 
 .nav-link {
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: 700;
-  color: #000;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
 }
 
 .nav-link:hover {
@@ -108,24 +108,25 @@
 }
 
 .nav-button {
-  position: absolute;
-  right: 40px;
-  top: 50%; /* Ставим по середине родителя */
-  transform: translateY(-50%); /* Центруем по оси Y */
-  right: 40px;
-  font-size: 25px;
-  padding: 10px 20px;
-  border: 2px solid #FF9235;
-  color: #FF9235;
-  border-radius: 15px;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    position: absolute;
+    right: 40px;
+    top: 50%; /* Ставим по середине родителя */
+    transform: translateY(-50%); /* Центруем по оси Y */
+    right: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #FF9235;
+    color: #FF9235;
+    border-radius: 15px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background: #FF9235;
-  color: white;
+    background: #FF9235;
+    color: white;
 }
 
 .intro-top {
@@ -133,7 +134,7 @@
 }
 
 .intro-top h1 {
-    font-size: 56px;
+    font-size: 54px;
 }
 
 .intro-top-text-wrapper {
@@ -164,7 +165,7 @@
 
 .description-top h2 {
     text-align: center;
-    font-size: 56px;
+    font-size: 54px;
     margin-bottom: 10px;
 }
 
@@ -210,7 +211,7 @@
 }
 
 .skills h2 {
-    font-size: 56px;
+    font-size: 54px;
 }
 
 .skills-table {
@@ -263,4 +264,61 @@
     padding: 0;
     margin: 0;
     padding: 20px 0 40px 0;
+}
+
+.projects .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.projects .container h2 {
+    font-size: 54px;
+}
+
+.projects .container ul {
+    display: grid;
+    grid-template-columns: repeat(3, 460px);
+    gap: 5px;
+    padding: 0;
+}
+
+.projects-item {
+    width: 450px;
+    height: 280px;
+    overflow: hidden;
+    border: 4px solid #8063A6;
+    border-radius: 12px;
+}
+
+.projects-item p{
+    font-size: 28px;
+    text-align: center;
+    color: #8063A6;
+    padding: 65px;
+}
+
+.projects-item-image {
+    object-fit: cover;
+    width: 130%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.projects-button a{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 4px solid #FF9235;
+    color: #FF9235;
+    border-radius: 15px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projects-button {
+    margin: 70px;
 }
