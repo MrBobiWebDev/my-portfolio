@@ -65,7 +65,7 @@
     width: 1200px;
     margin: 0 auto;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     box-sizing: border-box;
 }
 
@@ -279,14 +279,14 @@
 
 .projects .container ul {
     display: grid;
-    grid-template-columns: repeat(3, 460px);
+    grid-template-columns: repeat(3, 390px);
     gap: 5px;
     padding: 0;
 }
 
 .projects-item {
-    width: 450px;
-    height: 280px;
+    width: 380px;
+    height: 220px;
     overflow: hidden;
     border: 4px solid #8063A6;
     border-radius: 12px;
@@ -296,7 +296,7 @@
     font-size: 28px;
     text-align: center;
     color: #8063A6;
-    padding: 65px;
+    padding: 50px;
 }
 
 .projects-item-image {
@@ -309,7 +309,7 @@
 .projects-button a{
     font-size: 25px;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-decoration: none;
     border: 4px solid #FF9235;
     color: #FF9235;
@@ -319,6 +319,139 @@
     transition: all 0.3s ease;
 }
 
+.projects-button a:hover {
+    background: #FF9235;
+    color: white;
+}
+
 .projects-button {
     margin: 70px;
+}
+
+.contacts .container {
+    width: 100%;
+    justify-self: center;
+}
+
+.contacts-top {
+    max-width: 100%;
+    background-color: #5DD9C8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-top h2 {
+    font-size: 54px;
+    margin: 80px 0 20px 0;
+}
+
+.contacts-top-wrapper {
+    padding: 0 0 30px 0;
+}
+
+.contacts-top-wrapper p {
+    font-size: 28px;
+}
+
+.contacts-bottom {
+    padding: 40px 80px;
+    max-width: 1900px;
+    margin: 0 auto;  
+    display: flex;
+    gap: 90px;
+    align-items: center;
+    padding: 90px 0 30px 90px;
+    gap: 100px;
+}
+
+.contacts-bottom-left {
+    flex: 1; /* 1 часть */
+    max-width: 40%;
+    width: 800px;
+    height: 650px;
+    overflow: hidden;
+}
+
+.contacts-bottom-left img{
+    object-fit:contain;
+    width: 100%;
+    height: 100%;
+}
+
+.contacts-bottom-right {
+    flex: 2; /* 2 части, т.е. шире чем левая */
+    max-width: 60%;
+    height: 100%;
+    align-self: flex-start;
+}
+
+.contacts-bottom-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* расстояние между строками формы */
+}
+
+.contacts-form-top {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}   
+
+.contacts-form-top-input{
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* или сколько хочешь между label и input */
+}
+
+.contacts-form-top-input input,
+.contacts-form-top-input textarea {
+    border: 1px solid #FF9235;
+    border-radius: 15px;
+    background: transparent;
+    color: #FF9235;
+    padding: 12px 0;
+    font-size: 16px;
+}
+
+.contacts-form-top-input input {
+    width: 400px;
+    height: 30px;
+}
+
+.contacts-form-top-input textarea {
+    height: 400px;
+    resize: none;
+    width: 80%;
+}   
+
+.contacts-form-top-input label {
+    font-size: 20px;
+}
+
+.form-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin-top: 30px; /* отступ если надо */
+}
+
+.contacts-bottom-right button {
+    border: 2px solid #FF9235;
+    color: #FF9235;
+    border-radius: 15px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.contacts-bottom-right button:hover {
+    background: #FF9235;
+    color: white;
 }
