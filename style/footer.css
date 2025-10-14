@@ -1,0 +1,103 @@
+footer .container {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #8063A6;
+    height: 150px;
+    border-radius: 12px;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-top h4 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    max-width: 200px;
+    color: #fff;
+    margin-left: 70px;
+}
+
+.footer-top-text-wrapper {
+    text-align: center;
+    max-width: 400px;
+    color: #fff;
+}
+
+.footer-top-text-wrapper p {
+    font-size: 20px;
+}
+
+.footer-top button {
+    border: 3px solid #fff;
+    border-radius: 12px;
+    font-size: 20px;
+    background-color: #8063A6;
+    color: #fff;
+    padding: 20px 30px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.footer-top button:hover {
+    background-color: #fff;
+    color: #8063A6;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #5DD9C8;
+    margin-top: -75px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 120px 0 40px 0;
+}
+
+.footer-bottom-images-authors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.footer-bottom-images-authors a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.footer-bottom-icons {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-bottom-item {
+    border: 4px solid #1d2741;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.footer-bottom-item img {
+    width: 50px;  /* не 100%! */
+    height: 50px;
+    object-fit: contain;
+}

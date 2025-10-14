@@ -1,0 +1,21 @@
+.page {
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100%;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #1d2741;
+    padding-top: 11vh;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 11.66vh;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
