@@ -9,15 +9,17 @@
 
 .description-top h2 {
     text-align: center;
-    font-size: 54px;
+    line-height: 7.5vh;
+    font-size: 5vh;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .description-top {
     min-width: 100%;
-    min-height: 550px;
+    min-height: 51.2vh;
     background-color: #5DD9C8;
-    padding-top: 40px;
+    padding-top: 6.94vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,12 +27,14 @@
 
 .description-top p {
     text-align: center;
-    font-size: 36px;
-    max-width: 1000px;
+    font-size: 3.3vh;
+    line-height: 5vh;
+    font-weight: 400;
+    width: 46.98vw;
 }
 
 .description-bottom-image-wrapper {
-    margin-top: -170px;
+    margin-top: -12.5vh;
     overflow: hidden;
     height: auto;
     width: 20%;

@@ -9,13 +9,12 @@
     font-size: 20px;
     line-height: 1.4;
     color: #1d2741;
-    padding-top: 11vh;
+    padding-top: 8.2vh;
 }
 
 .container {
     width: 1200px;
     margin: 0 auto;
-    padding-top: 11.66vh;
-    padding-bottom: 60px;
+    padding-top: 7.4vh;
     box-sizing: border-box;
 }
