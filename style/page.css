@@ -5,13 +5,13 @@
     font-size: 20px;
     line-height: 1.4;
     color: #1d2741;
-    padding-top: 8.2vh;
+    /* padding-top: 8.2vh; */
     overflow-x: hidden;
 }
 
 .container {
     min-width: 1200px;
     margin: 0 auto;
-    padding-top: 7.4vh;
+    /* padding-top: 7.4vh; */
     box-sizing: border-box;
 }
