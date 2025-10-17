@@ -1,10 +1,9 @@
 .description .container {
-    min-width: 100%;
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
-    padding-top: 0;
+    padding: 0;
 }
 
 .description-top h2 {
@@ -12,17 +11,20 @@
     line-height: 7.5vh;
     font-size: 5vh;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 3.7vh;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .description-top {
-    min-width: 100%;
-    min-height: 51.2vh;
+    width: 100%;
+    height: 51.2vh;
     background-color: #5DD9C8;
-    padding-top: 6.94vh;
+    padding: 6.92vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
 }
 
 .description-top p {
@@ -31,15 +33,16 @@
     line-height: 5vh;
     font-weight: 400;
     width: 46.98vw;
+    margin: 3.7vh;
 }
 
 .description-bottom-image-wrapper {
-    margin-top: -12.5vh;
+    margin-top: -13.56vh;
     overflow: hidden;
     height: auto;
     width: 20%;
-    max-width: 600px;
-    min-width: 450px;
+    max-width: 21.1vw;
+    min-width: 50vh;
     border: 3px solid #5DD9C8;
     border-radius: 12px;
 }
