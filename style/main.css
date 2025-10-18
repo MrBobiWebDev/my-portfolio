@@ -453,6 +453,7 @@
   line-height: 3.7vh;
   font-weight: 400;
   text-align: center;
+  text-align: left;
 }
 .contacts .container .contacts-bottom .contacts-bottom-right .form-button-wrapper {
   display: flex;
