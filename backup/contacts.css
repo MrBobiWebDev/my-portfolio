@@ -1,0 +1,142 @@
+.contacts .container {
+    min-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.contacts-top {
+    width: 100%;
+    height: 18.52vh;
+    background-color: #5DD9C8;
+    padding: 5.92vh;
+    padding-right: 6.92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 4.17vh;
+}
+
+.contacts-top h2 {
+    font-size: 5vh;
+    font-weight: 700;
+    line-height: 7.5vh;
+    margin: 0;
+}
+
+.contacts-top-wrapper p {
+    font-size: 3.3vh;
+    font-weight: 400;
+    line-height: 5vh;
+    margin: 0;
+}
+
+.contacts-bottom {
+    margin: 0 auto;  
+    display: flex;
+    gap: 7.08vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-bottom-left {
+    width: 33.65vw;
+    overflow: hidden;
+}
+
+.contacts-bottom-left img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.contacts-bottom-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 48.33vw;
+    gap: 4.44vh;
+}
+
+.contacts-form-top {
+    display: flex;
+    width: 48.33vw;
+    gap: 6.88vw;
+}   
+
+.contacts-form-top-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.93vh;
+}
+
+.contacts-form-input {
+    display: flex;
+    flex-direction: column;
+    width: 48.33vw;
+    gap: 0.93vh;
+}
+
+.contacts-form-top-input input,
+.contacts-form-input textarea {
+    border: 1px solid #FF9235;
+    border-radius: 15px;
+    background: transparent;
+    padding: 1.1vh 0.5vw;
+    font-size: 3.4vh;
+    font-weight: 400;
+    line-height: 3.7vh;
+}
+
+.contacts-form-top-input input {
+    width: 20.16vw;
+    height: 4.85vh;
+}
+
+.contacts-form-input textarea {
+    height: 31.67vh;
+    resize: none;
+    width: 100%;
+}   
+
+.contacts-form-top-input label {
+    margin-left: 0.26vw;
+}
+
+.contacts-form-input label {
+    margin-left: 1.3vw;
+}
+
+.contacts-form-top-input label .contacts-form-input label {
+    font-size: 2.3vh;
+    font-weight: 400;
+    line-height: 3.3vh;
+}
+
+.form-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 103%;
+    margin-top: 4.72vh; /* отступ если надо */
+}
+
+.contacts-bottom-right button {
+    border: 2px solid #FF9235;
+    color: #FF9235;
+    border-radius: 15px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 2.3vh;
+    line-height: 2.7vh;
+    font-weight: 700;
+    padding: 1.38vh 1.87vw;
+}
+
+.contacts-bottom-right button:hover {
+    background: #FF9235;
+    color: white;
+}

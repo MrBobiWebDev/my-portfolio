@@ -1,0 +1,33 @@
+.intro-top {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15.4vh;
+}
+
+.intro-top h1 {
+    font-size: 5vh;
+    line-height: 7.5vh;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro-top-text-wrapper {
+    font-size: 3.3vh;
+    font-weight: 400;
+    line-height: 5vh;
+    text-align: center;
+    width: 58.85vw;
+}
+
+.intro-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image {
+    width: 33.85vw;
+    height: auto;
+}

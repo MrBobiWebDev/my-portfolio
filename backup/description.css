@@ -1,0 +1,53 @@
+.description .container {
+    min-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    padding-top: 4.5vh;
+}
+
+.description-top h2 {
+    text-align: center;
+    line-height: 7.5vh;
+    font-size: 5vh;
+    font-weight: 700;
+    margin-bottom: 3.7vh;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.description-top {
+    width: 100%;
+    height: 51.2vh;
+    background-color: #5DD9C8;
+    padding: 6.92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-top p {
+    text-align: center;
+    font-size: 3.3vh;
+    line-height: 5vh;
+    font-weight: 400;
+    width: 46.98vw;
+    margin: 3.7vh;
+}
+
+.description-bottom-image-wrapper {
+    margin-top: -13.56vh;
+    overflow: hidden;
+    width: 21.1vw;
+    border: 3px solid #5DD9C8;
+    border-radius: 10px;
+}
+
+.description-bottom-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
