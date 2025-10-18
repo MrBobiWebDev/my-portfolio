@@ -1,0 +1,79 @@
+.skills {
+    .container {
+        @include display-flex-center-vertical;
+        padding-top: 15.59vh;
+    }
+
+    h2 {
+        @include Headline;
+        margin: 0;
+    }
+
+    .skills-table {
+        width: 70vw;
+        height: 91.85vh;
+        margin-top: 5.5vh;
+        border-collapse: collapse;
+        table-layout: fixed;
+        @include border-1px($turquoise-color);
+
+        th {
+            @include border-1px($turquoise-color);
+            border-bottom: none;
+            padding-top: 6.48vh;
+            height: 22.78vh;
+        }
+
+        td {
+            @include border-1px($turquoise-color);
+            @include lack-of-borders;
+        }
+
+        .skills-table-text-wrapper {
+            @include fonts-36-54-700;
+        }
+
+        .skills-table-description {
+            td {
+                @include lack-of-borders;
+                @include fonts-30-40-400;
+                vertical-align: top;
+                padding: 0 3.1vw;                
+            }
+        }
+
+        .skills-table-values {
+            @include border-1px($turquoise-color);
+            @include lack-of-borders;
+            @include fonts-30-40-400;
+            vertical-align: top;
+            padding: 0 3.1vw;
+        }
+
+        .skills-table-titles {
+            td {
+                color: $orange-color;
+                @include border-1px($turquoise-color);
+                @include lack-of-borders;
+            }
+        }
+
+        .skills-table-values {
+            @include border-1px($turquoise-color);
+            @include lack-of-borders;
+
+            .skills-table-titles {
+                color: $orange-color;
+                @include fonts-30-40-700;
+                padding: 0;
+                margin: 0;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 6.48vh;
+            }
+        }
+    }
+}

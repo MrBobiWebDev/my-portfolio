@@ -1,0 +1,121 @@
+.contacts {
+    .container {
+        @include container-size;
+        @include display-flex-center-vertical;
+        align-items: none;
+        padding: 0;
+
+        .contacts-top {
+            width: $width;
+            height: 18.52vh;
+            background-color: $turquoise-color;
+            padding: 5.92vh;
+            padding-right: 6.92vh;
+            @include display-flex-center-vertical;
+            justify-content: start;
+            gap: 4.17vh;
+
+            h2 {
+                @include Headline;
+                margin: 0;
+            }
+
+            .contacts-top-wrapper {
+                p {
+                    @include fonts-36-54-400;
+                    margin: 0;
+                }
+            }
+        }
+
+        .contacts-bottom {
+            @include display-flex-center-horizontal;
+            margin: 0 auto; 
+            gap: 7.08vw;
+
+            .contacts-bottom-left {
+                width: 33.65vw;
+                overflow: hidden;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .contacts-bottom-right {
+                form {
+                    @include display-flex-center-vertical-for-contacts;
+                    width: 48.33vw;
+                    gap: 4.44vh;
+
+                    .contacts-form-top {
+                        display: flex;
+                        width: 48.33vw;
+                        gap: 6.88vw;
+
+                        .contacts-form-top-input {
+                            @include display-flex-center-vertical-for-contacts;
+                            gap: 0.93vh;
+
+                            input {
+                                width: 20.16vw;
+                                height: 4.85vh;
+                            }
+
+                            label {
+                                @include fonts-25-36-400;
+                                text-align: left;
+                                margin-left: 0.26vw;
+                            }
+                        }
+                    }
+
+                    .contacts-form-input {
+                        @include display-flex-center-vertical-for-contacts;
+                        width: 48.33vw;
+                        gap: 0.93vh;
+
+                        textarea {
+                            height: 31.67vh;
+                            resize: none;
+                            width: 100%;
+                        }
+
+                        label {
+                            @include fonts-25-36-400;
+                            text-align: left;
+                            margin-left: 1.3vw;
+                        }
+                    }
+
+                    .contacts-form-top-input input,
+                    .contacts-form-input textarea {
+                        @include border-1px ($orange-color);
+                        border-radius: 15px;
+                        background: transparent;
+                        padding: 1.1vh 0.5vw;
+                        @include fonts-func (3.4vh, 3.7vh, 400);
+                    }
+                }
+                
+                .form-button-wrapper {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 103%;
+                    margin-top: 4.72vh;
+
+                    button{
+                        @include button ($orange-color);
+                        @include Git-and-send-contacts;
+                    }
+
+                    button:hover {
+                        @include button-hover ($orange-color, $white-color);
+                    }
+                }
+            }
+        }
+    }
+}

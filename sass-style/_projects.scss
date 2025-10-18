@@ -1,0 +1,71 @@
+.projects {
+    .container {
+        @include display-flex-center-vertical;
+        padding: 0;
+        padding-top: 15.4vh;
+
+        h2 {
+            @include Headline;
+            margin: 0;
+            margin-bottom: 6.48vh;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 22.91vw);
+            gap: 0.93vh;
+            padding: 0;
+            margin: 0;
+
+            .projects-item, .projects-item-text {
+                width: 22.39vw;
+                height: 27.41vh;
+                overflow: hidden;
+                border-radius: 12px;
+                border: 4px solid $violet-color;
+            }
+
+            .projects-item-text {
+                @include display-flex-center-horizontal;
+            }
+
+            .projects-item {
+                p {
+                    @include fonts-func (2.59vh, 2.31vh, 400);
+                    color: $violet-color;
+                }
+
+                .projects-item-image-Saint {
+                    object-fit: cover;
+                    width: 115%;
+                }
+
+                .projects-item-image-Saint:hover {
+                    z-index: 4;
+                    transition: all 0.3 ease;
+                    background-color: darkblue;
+                }
+
+                .projects-item-image-taps {
+                    object-fit: cover;
+                    margin-left: -1.5vw;
+                    width: 155%;
+                }
+            }
+        }
+
+        .projects-button {
+            margin: 9.26vh;
+
+            a {
+                @include button ($orange-color);
+                @include Git-and-send-contacts;
+                color: $orange-color;
+            }
+
+            a:hover {
+                @include button-hover ($orange-color, $white-color);
+            }
+        }
+    }
+}

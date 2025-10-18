@@ -1,0 +1,40 @@
+.description {
+    .container {
+        @include container-size;
+        @include display-flex-center-vertical;
+        padding: 0;
+        padding-top: 4.5vh;
+    }
+
+    .description-top {
+        width: $width;
+        height: 51.2vh;
+        background-color: $turquoise-color;
+        padding: 6.92vh;
+        @include display-flex-center-vertical;
+
+        h2 {
+            @include Headline;
+            margin-bottom: 3.7vh;
+            text-transform: uppercase;
+            margin: 0;    
+        }
+
+        p {
+            @include fonts-36-54-400;
+            width: 46.98vw;
+            margin: 3.7vh;
+        }
+    }
+    
+    .description-bottom-image-wrapper {
+        @include image-border;
+        margin-top: -13.56vh;
+        overflow: hidden;
+        width: 21.1vw;
+
+        .description-bottom-image {
+            @include image-scale;
+        }
+    }
+}

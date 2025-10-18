@@ -1,0 +1,44 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: $width;
+    background-color: $white-color; 
+    height: 11.66vh;
+    display: $display-flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+
+    .navbar {
+        @include display-flex-center-horizontal;
+        width: $width;
+    }
+
+    .nav-list {
+        @include display-flex-center-horizontal;
+        text-align: center;
+        width: $width;
+        gap: 6.21vw;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        @include fonts-25-36-700;
+        color: $black-color;
+    }
+
+    .nav-link:hover {
+        opacity: 0.5;
+    }
+
+    .nav-button {
+        @include header-button;
+        @include button ($orange-color);
+    }
+
+    .nav-button:hover {
+        @include button-hover ($orange-color, $white-color);
+    }
+}

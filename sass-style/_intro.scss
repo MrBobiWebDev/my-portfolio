@@ -1,0 +1,25 @@
+.intro {
+    .intro-top {
+        @include display-flex-center-vertical;
+        padding-top: 15.4vh;
+    }
+
+    h1 {
+        @include Headline;
+        text-transform: uppercase;
+    }
+
+    .intro-top-text-wrapper{
+        @include fonts-36-54-400;
+        width: 58.85vw;
+    }
+
+    .intro-bottom {
+        @include display-flex-center-horizontal;
+    }
+
+    .intro-image {
+        width: 33.85vw;
+        height: auto;
+    }
+}

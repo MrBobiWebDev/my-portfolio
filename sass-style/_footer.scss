@@ -1,0 +1,106 @@
+footer {
+    .container {
+        @include container-size;
+        @include display-flex-center-vertical;
+        padding: 0;
+        overflow-x: hidden;
+
+        .footer-top {
+            @include display-flex-center-horizontal;
+            justify-content: space-between;
+            background-color: $violet-color;
+            border-radius: 12px;
+            width: 70vw;
+            position: relative;
+            z-index: 2;
+            padding: 1vh 2.39vw;
+            height: 17.59vh;
+
+            h4 {
+                @include fonts-func(2.77vh, 4.17vh, 700);
+                width: 16.82vw;
+                color: $white-color;
+            }
+
+            .footer-top-text-wrapper {
+                text-align: center;
+                width: 24.31vw;
+
+                p {
+                    @include footer-font;
+                }
+            }
+
+            button {
+                @include footer-font;
+                @include button ($white-color);
+                background-color: $violet-color;
+                border-radius: 12px;
+                padding: 1.39vh 1.56vw;
+                cursor: pointer;
+            }
+
+            button:hover {
+                @include button-hover($white-color, $violet-color)
+            }
+        }
+
+        .footer-bottom {
+            min-width: 100%;
+            height: 34.52vh;
+            background-color: $turquoise-color;
+            margin-top: -8.79vh;
+            position: relative;
+            @include display-flex-center-vertical;
+            justify-content: center;
+            gap: 8.33vh;
+            padding: 14.35vh 0 4.17vh 0;
+
+            .footer-bottom-images-authors{
+                @include display-flex-center-vertical;
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: $black-color;
+                    @include fonts-func (1.48vh, 2.5vh, 400);
+                }
+            }
+
+            .footer-bottom-icons {
+                display: flex;
+                gap: 1.55vw;
+
+                .footer-bottom-item {
+                    border: 2px solid $blue-color;
+                    border-radius: 50%;
+                    width: 2.45vw;
+                    height: 2.45vw;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+
+                    .tg {
+                        width: 4.08vw;  
+                        height: 5.38vh;
+                        object-fit: contain;
+                    }
+
+                    .habr {
+                        padding-top: 0.2vh;
+                        width: 3.88vw;  
+                        height: 4.99vh;
+                        object-fit: contain;
+                    }
+
+                    .email {
+                        padding-top: 0.2vh;
+                        width: 3.88vw;  
+                        height: 4.99vh;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

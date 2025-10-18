@@ -1,0 +1,19 @@
+$font-path: "assets/fonts/";
+
+@mixin tilda-sans($weight, $file) {
+    @font-face {
+        font-family: "Tilda Sans";
+        font-style: normal;
+        font-display: swap;
+        font-weight: $weight;
+        src: url("#{$font-path}#{$file}.ttf") format("truetype");
+    }
+}
+
+@include tilda-sans(200, "TildaSans-Light");
+@include tilda-sans(400, "TildaSans-Regular");
+@include tilda-sans(500, "TildaSans-Medium");
+@include tilda-sans(600, "TildaSans-Semibold");
+@include tilda-sans(700, "TildaSans-Bold");
+@include tilda-sans(800, "TildaSans-Black");
+

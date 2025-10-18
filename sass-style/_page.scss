@@ -1,0 +1,15 @@
+.page-body {
+    min-height: 100%;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $blue-color;
+    overflow-x: hidden;
+}
+
+.container {
+    min-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

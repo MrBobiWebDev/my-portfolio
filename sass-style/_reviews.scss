@@ -1,0 +1,83 @@
+.reviews {
+    .container {
+        @include display-flex-center-vertical;
+
+        h2 {
+            @include Headline;
+            margin: 0;
+        }
+
+        .reviews-text-wrapper {
+            @include fonts-36-54-400;
+            width: 28.65vw;
+            margin-top: 5.93vh;
+            margin-bottom: 2.32vh;
+        }
+
+        .reviews-item {
+            @include display-flex-center-vertical;
+
+            .reviews-item-image-wrapper {
+                overflow: hidden;
+                width: 16.35vw;
+                height: 21.85vh;
+                @include display-flex-center-horizontal;
+                @include image-border;
+
+                .reviews-item-image {
+                    @include image-scale;
+                }
+            }
+
+            p {
+                @include fonts-36-54-400;
+                @include display-flex-center-vertical;
+            }
+
+            .reviews-item-text-wrapper {
+                margin-top: 6.57vh;
+                margin-bottom: 4.63vh;
+            }
+
+            form {
+                @include display-flex-center-vertical;
+            }
+
+            figure {
+                margin: 0;
+
+                .reviews-figcaption {
+                    margin-bottom: 3.7vh;
+
+                    figcaption {
+                        @include fonts-func (1.8vh, 2.7vh, 400);
+                        @include display-flex-center-vertical;
+                    }
+                }
+            }
+
+            .reviews-buttons-wrapper {
+                display: flex;
+                margin-bottom: 4.17vh;
+                gap: 0.52vw;
+
+                button {
+                    border: 3px solid $orange-color;
+                    border-radius: 25px;
+                    background-color: $white-color;
+                    height: 3.7vh;
+                    overflow: hidden;
+                    @include display-flex-center-horizontal;
+                    cursor: pointer;
+                    margin: 0;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
