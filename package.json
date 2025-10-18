@@ -1,0 +1,20 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Добро пожаловать в мой персональный сайт-портфолио!",
+  "main": "index.js",
+"scripts": {
+  "sass": "sass --watch sass-style/main.scss style/main.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBobiWebDev/my-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrBobiWebDev/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/MrBobiWebDev/my-portfolio#readme"
+}
