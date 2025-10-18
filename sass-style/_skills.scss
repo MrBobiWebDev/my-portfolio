@@ -6,6 +6,7 @@
 
     h2 {
         @include Headline;
+        text-transform: uppercase;
         margin: 0;
     }
 

@@ -191,6 +191,7 @@
   line-height: 7.5vh;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   margin: 0;
 }
 .skills .skills-table {
@@ -278,6 +279,7 @@
   line-height: 7.5vh;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 6.48vh;
 }
@@ -490,6 +492,7 @@
   line-height: 7.5vh;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   margin: 0;
 }
 .reviews .container .reviews-text-wrapper {
