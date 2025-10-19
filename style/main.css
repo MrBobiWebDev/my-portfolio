@@ -1,3 +1,21 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Tilda Sans";
   font-style: normal;
@@ -40,6 +58,10 @@
   font-weight: 800;
   src: url("assets/fonts/TildaSans-Black.ttf") format("truetype");
 }
+html, body {
+  overflow-x: hidden;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -48,6 +70,7 @@
   height: 11.66vh;
   display: flex;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+  z-index: 3;
 }
 .header .navbar {
   display: flex;
@@ -156,6 +179,8 @@
   margin-bottom: 3.7vh;
   text-transform: uppercase;
   margin: 0;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 .description .description-top p {
   font-size: 3.3vh;
@@ -164,6 +189,8 @@
   text-align: center;
   width: 46.98vw;
   margin: 3.7vh;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 .description .description-bottom-image-wrapper {
   border: 3px solid #5DD9C8;
@@ -171,12 +198,25 @@
   margin-top: -13.56vh;
   overflow: hidden;
   width: 21.1vw;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 .description .description-bottom-image-wrapper .description-bottom-image {
   display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.description h2:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.description p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.description .description-bottom-image-wrapper, .description .description-bottom-image:nth-child(3) {
+  animation-delay: 0.6s;
 }
 
 .skills .container {
@@ -193,6 +233,8 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 .skills .skills-table {
   width: 70vw;
@@ -201,6 +243,8 @@
   border-collapse: collapse;
   table-layout: fixed;
   border: 1px solid #5DD9C8;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 .skills .skills-table th {
   border: 1px solid #5DD9C8;
@@ -227,7 +271,7 @@
   font-weight: 400;
   text-align: center;
   vertical-align: top;
-  padding: 0 3.1vw;
+  padding: 2vh 3.1vw;
 }
 .skills .skills-table .skills-table-values {
   border: 1px solid #5DD9C8;
@@ -242,6 +286,10 @@
 }
 .skills .skills-table .skills-table-titles td {
   color: #FF9235;
+  font-size: 2.7vh;
+  line-height: 4.17vh;
+  font-weight: 700;
+  text-align: center;
   border: 1px solid #5DD9C8;
   border-top: none;
   border-bottom: none;
@@ -265,6 +313,12 @@
   padding: 0;
   margin-bottom: 6.48vh;
 }
+.skills h2:nth-child(1) {
+  animation-delay: 0.8s;
+}
+.skills .skills-table:nth-child(2) {
+  animation-delay: 1s;
+}
 
 .projects .container {
   display: flex;
@@ -282,6 +336,11 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 6.48vh;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.projects .container h2:nth-child(1) {
+  animation-delay: 1.2s;
 }
 .projects .container ul {
   display: grid;
@@ -290,7 +349,103 @@
   padding: 0;
   margin: 0;
 }
-.projects .container ul .projects-item, .projects .container ul .projects-item-text {
+.projects .container ul .projects-item {
+  position: relative;
+  width: 22.39vw;
+  height: 27.41vh;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 4px solid #8063A6;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+.projects .container ul .projects-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.projects .container ul .projects-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.projects .container ul .projects-item:hover {
+  z-index: 2;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+.projects .container ul .projects-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.projects .container ul .projects-item:hover img {
+  transform: scale();
+}
+.projects .container ul .projects-item .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 99, 166, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4 ease;
+}
+.projects .container ul .projects-item:hover .project-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+.projects .container ul .projects-item .project-overlay p {
+  font-size: 2.3vh;
+  line-height: 3.3vh;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+.projects .container ul .projects-item .project-overlay a {
+  border-radius: 15px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 2vh;
+  line-height: 3vh;
+  font-weight: 600;
+  text-align: center;
+  color: #8063A6;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 1vh 2vw;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(255, 146, 53, 0.3);
+  border: 2px solid transparent;
+}
+.projects .container ul .projects-item .project-overlay a:hover {
+  background: #FF9235;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 146, 53, 0.5);
+}
+.projects .container ul .projects-item:hover .project-overlay p, .projects .container ul .projects-item .project-overlay a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects .container ul .projects-item-text {
   width: 22.39vw;
   height: 27.41vh;
   overflow: hidden;
@@ -339,6 +494,11 @@
   padding: 1.38vh 1.87vw;
   text-decoration: none;
   color: #FF9235;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+.projects .container .projects-button a:nth-child(1) {
+  animation-delay: 0.6s;
 }
 .projects .container .projects-button a:hover {
   background: #FF9235;
@@ -387,6 +547,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-top: 9.26vh;
   gap: 7.08vw;
 }
 .contacts .container .contacts-bottom .contacts-bottom-left {
@@ -413,6 +574,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.93vh;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.contacts .container .contacts-bottom .contacts-bottom-right form .contacts-form-top .contacts-form-top-input:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.contacts .container .contacts-bottom .contacts-bottom-right form .contacts-form-top .contacts-form-top-input:nth-child(2) {
+  animation-delay: 0.4s;
 }
 .contacts .container .contacts-bottom .contacts-bottom-right form .contacts-form-top .contacts-form-top-input input {
   width: 20.16vw;
@@ -431,6 +600,11 @@
   flex-direction: column;
   width: 48.33vw;
   gap: 0.93vh;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.contacts .container .contacts-bottom .contacts-bottom-right form .contacts-form-input:nth-child(1) {
+  animation-delay: 0.8s;
 }
 .contacts .container .contacts-bottom .contacts-bottom-right form .contacts-form-input textarea {
   height: 31.67vh;
@@ -462,6 +636,11 @@
   justify-content: flex-end;
   width: 103%;
   margin-top: 4.72vh;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.contacts .container .contacts-bottom .contacts-bottom-right .form-button-wrapper:nth-child(1) {
+  animation-delay: 1s;
 }
 .contacts .container .contacts-bottom .contacts-bottom-right .form-button-wrapper button {
   border-radius: 15px;
@@ -486,6 +665,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.reviews .container:nth-child(1) {
+  animation-delay: 0.2s;
 }
 .reviews .container h2 {
   font-size: 5vh;
@@ -593,7 +777,6 @@ footer .container {
   align-items: center;
   text-align: center;
   padding: 0;
-  overflow-x: hidden;
 }
 footer .container .footer-top {
   display: flex;
@@ -647,9 +830,9 @@ footer .container .footer-top button:hover {
   color: #8063A6;
 }
 footer .container .footer-bottom {
-  min-width: 100%;
-  height: 34.52vh;
+  width: 100%;
   background-color: #5DD9C8;
+  height: 34.52vh;
   margin-top: -8.79vh;
   position: relative;
   display: flex;

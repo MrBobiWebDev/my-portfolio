@@ -1,6 +1,10 @@
 .reviews {
     .container {
         @include display-flex-center-vertical;
+        opacity: 0;
+        animation: fadeUp 0.8s ease forwards;
+
+        &:nth-child(1) { animation-delay: 0.2s; }
 
         h2 {
             @include Headline;

@@ -31,6 +31,7 @@
         .contacts-bottom {
             @include display-flex-center-horizontal;
             margin: 0 auto; 
+            margin-top: 9.26vh;
             gap: 7.08vw;
 
             .contacts-bottom-left {
@@ -58,6 +59,11 @@
                         .contacts-form-top-input {
                             @include display-flex-center-vertical-for-contacts;
                             gap: 0.93vh;
+                            opacity: 0;
+                            animation: fadeUp 0.8s ease forwards;
+
+                            &:nth-child(1) { animation-delay: 0.2s; }
+                            &:nth-child(2) { animation-delay: 0.4s; }
 
                             input {
                                 width: 20.16vw;
@@ -76,6 +82,10 @@
                         @include display-flex-center-vertical-for-contacts;
                         width: 48.33vw;
                         gap: 0.93vh;
+                        opacity: 0;
+                        animation: fadeUp 0.8s ease forwards;
+
+                        &:nth-child(1) { animation-delay: 0.8s; }
 
                         textarea {
                             height: 31.67vh;
@@ -106,6 +116,10 @@
                     justify-content: flex-end;
                     width: 103%;
                     margin-top: 4.72vh;
+                    opacity: 0;
+                    animation: fadeUp 0.8s ease forwards;
+
+                    &:nth-child(1) { animation-delay: 1s; }
 
                     button{
                         @include button ($orange-color);
