@@ -1,5 +1,6 @@
 .reviews {
     .container {
+        margin-top: 10vh;
         @include display-flex-center-vertical;
         opacity: 0;
         animation: fadeUp 0.8s ease forwards;

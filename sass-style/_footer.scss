@@ -71,31 +71,30 @@ footer {
                 gap: 1.55vw;
 
                 .footer-bottom-item {
-                    border: 2px solid $blue-color;
+                    border: 0.09vw solid $blue-color;
                     border-radius: 50%;
-                    width: 2.45vw;
-                    height: 2.45vw;
+                    width: 4.35vh;
+                    height: 4.05vh;
                     overflow: hidden;
                     display: flex;
                     justify-content: center;
+                    align-items: center;
+                    padding-top: 5px;
 
                     .tg {
-                        width: 4.08vw;  
-                        height: 5.38vh;
+                        width: 30.40087890625px;  
                         object-fit: contain;
                     }
 
                     .habr {
                         padding-top: 0.2vh;
-                        width: 3.88vw;  
-                        height: 4.99vh;
+                        width: 28px;  
                         object-fit: contain;
                     }
 
                     .email {
                         padding-top: 0.2vh;
-                        width: 3.88vw;  
-                        height: 4.99vh;
+                        width: 31px;  
                         object-fit: contain;
                     }
                 }

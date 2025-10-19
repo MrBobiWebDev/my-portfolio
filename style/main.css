@@ -58,7 +58,7 @@
   font-weight: 800;
   src: url("assets/fonts/TildaSans-Black.ttf") format("truetype");
 }
-html, body {
+html, .page-body {
   overflow-x: hidden;
 }
 
@@ -327,6 +327,7 @@ html, body {
   text-align: center;
   padding: 0;
   padding-top: 15.4vh;
+  justify-content: center;
 }
 .projects .container h2 {
   font-size: 5vh;
@@ -345,6 +346,7 @@ html, body {
 .projects .container ul {
   display: grid;
   grid-template-columns: repeat(3, 22.91vw);
+  justify-content: center;
   gap: 0.93vh;
   padding: 0;
   margin: 0;
@@ -373,13 +375,11 @@ html, body {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .projects .container ul .projects-item img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  object-position: center;
   object-fit: cover;
   transition: transform 0.4s ease;
-}
-.projects .container ul .projects-item:hover img {
-  transform: scale();
+  height: 27.41vh;
 }
 .projects .container ul .projects-item .project-overlay {
   position: absolute;
@@ -412,6 +412,7 @@ html, body {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.4s ease;
+  width: 16.25vw;
 }
 .projects .container ul .projects-item .project-overlay a {
   border-radius: 15px;
@@ -445,18 +446,6 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
-.projects .container ul .projects-item-text {
-  width: 22.39vw;
-  height: 27.41vh;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 4px solid #8063A6;
-}
-.projects .container ul .projects-item-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .projects .container ul .projects-item p {
   font-size: 2.59vh;
   line-height: 2.31vh;
@@ -466,7 +455,6 @@ html, body {
 }
 .projects .container ul .projects-item .projects-item-image-Saint {
   object-fit: cover;
-  width: 115%;
 }
 .projects .container ul .projects-item .projects-item-image-Saint:hover {
   z-index: 4;
@@ -475,8 +463,25 @@ html, body {
 }
 .projects .container ul .projects-item .projects-item-image-taps {
   object-fit: cover;
-  margin-left: -1.5vw;
-  width: 155%;
+  object-position: left center;
+  height: 25.41vh;
+}
+.projects .container ul .projects-item-text {
+  width: 22.39vw;
+  height: 27.41vh;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 4px solid #8063A6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects .container ul .projects-item-text p {
+  color: #8063A6;
+  font-size: 2.59vh;
+  line-height: 2.31vh;
+  font-weight: 400;
+  text-align: center;
 }
 .projects .container .projects-button {
   margin: 9.26vh;
@@ -661,6 +666,7 @@ html, body {
 }
 
 .reviews .container {
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -863,29 +869,28 @@ footer .container .footer-bottom .footer-bottom-icons {
   gap: 1.55vw;
 }
 footer .container .footer-bottom .footer-bottom-icons .footer-bottom-item {
-  border: 2px solid #1d2741;
+  border: 0.09vw solid #1d2741;
   border-radius: 50%;
-  width: 2.45vw;
-  height: 2.45vw;
+  width: 4.35vh;
+  height: 4.05vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 5px;
 }
 footer .container .footer-bottom .footer-bottom-icons .footer-bottom-item .tg {
-  width: 4.08vw;
-  height: 5.38vh;
+  width: 30.4008789063px;
   object-fit: contain;
 }
 footer .container .footer-bottom .footer-bottom-icons .footer-bottom-item .habr {
   padding-top: 0.2vh;
-  width: 3.88vw;
-  height: 4.99vh;
+  width: 28px;
   object-fit: contain;
 }
 footer .container .footer-bottom .footer-bottom-icons .footer-bottom-item .email {
   padding-top: 0.2vh;
-  width: 3.88vw;
-  height: 4.99vh;
+  width: 31px;
   object-fit: contain;
 }
 
