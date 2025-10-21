@@ -1,40 +1,148 @@
-html, .page-body {
-    overflow-x: hidden
+* {
+    box-sizing: border-box;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    width: $width;
-    background-color: $white-color; 
-    height: 11.66vh;
-    display: $display-flex;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
-    z-index: 3;
+@media (min-width: 900px) {
+    .navbar900 {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        width: $width;
+        background-color: $white-color; 
+        height: 11.66vh;
+        display: $display-flex;
+        z-index: 10;
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .navbar {
+            @include display-flex-center-horizontal;
+            width: $width;
+
+        }
+
+        .nav-list {
+            @include display-flex-center-horizontal;
+            text-align: center;
+            width: $width;
+            gap: 6.21vw;
+        }
+
+        .nav-item {
+            @include display-flex-center-horizontal;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            @include fonts-25-36-700;
+            color: $black-color;
+        }
+
+        .nav-link:hover {
+            opacity: 0.5;
+        }
+
+        .nav-button {
+            @include header-button;
+            @include button ($orange-color);
+        }
+
+        .nav-button:hover {
+            @include button-hover ($orange-color, $white-color);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    * {
+        box-sizing: border-box;
+    }
 
     .navbar {
-        @include display-flex-center-horizontal;
-        width: $width;
+        display: none;
     }
 
-    .nav-list {
-        @include display-flex-center-horizontal;
-        text-align: center;
+    .header {
+        position: fixed;
+        top: 0;
         width: $width;
-        gap: 6.21vw;
+        background-color: $white-color; 
+        height: 10.66vh;
+        display: $display-flex;
+        z-index: 10;
+    }   
+
+    .burger {
+
+        @include display-flex-center-vertical;
+        gap: 0.9vh;
+        height: 1.85vh;
+        top: 3.51vh;
+        left: 3.13vw;
+        align-items: start;
+        z-index: 11;
+        position: fixed;
+
+        .burger-line {
+            width: 25px;
+            height: 1px;
+            background-color: #141C3A;
+            border: 2px solid #141C3A;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        &:hover .burger-line{
+            background-color: $violet-color;
+            border: 2px solid $violet-color;
+        }
     }
 
-    .nav-item {
+    .nav-list900 {
+        position: fixed;
+        height: 30.15vh;
+        padding-left: 3.13vw;
+        margin-top: 10.66vh;
+        transform: translateY(-300%);
+        transition: transform 0.4s ease;
+        @include display-flex-center-vertical-for-contacts;
+        justify-content: start;
+        gap: 2.31vh;
+        @include container-size;
+        background-color: $white-color;
+        z-index: 8;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ .nav-list900 {
+        transform: translateY(0px);
+    }
+
+    .menu-toggle:checked + .burger:hover .burger-line {
+        background-color: $violet-color;
+        border: 2px solid $violet-color;
+    }
+
+    .nav-item900 {
         list-style: none;
     }
 
-    .nav-link {
+    .nav-link900 {
         text-decoration: none;
         @include fonts-25-36-700;
         color: $black-color;
     }
 
-    .nav-link:hover {
+    .nav-link900:hover {
         opacity: 0.5;
     }
 

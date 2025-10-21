@@ -86,3 +86,15 @@
     h2:nth-child(1) {animation-delay: 0.8s;}
     .skills-table:nth-child(2) {animation-delay: 1s;}
 }
+
+@media (max-width: 1223px) {
+    .skills .container .skills-table {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills .container .skills-table {
+        width: 100vw;
+    }
+}

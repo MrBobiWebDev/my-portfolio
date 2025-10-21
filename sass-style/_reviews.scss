@@ -51,6 +51,8 @@
 
             figure {
                 margin: 0;
+                @include display-flex-center-vertical;
+
 
                 .reviews-figcaption {
                     margin-bottom: 3.7vh;
@@ -85,5 +87,12 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1195px) {
+    .reviews .container .reviews-text-wrapper {
+        width: 38.65vw;
+        margin-top: 4.93vh;
     }
 }
