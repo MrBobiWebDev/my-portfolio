@@ -1,10 +1,33 @@
-@media (max-width: 1257px) {
-    .description .container .description-top p {
-        max-width: 76.98vw;
+@media (max-width: 1168px) {
+    .description-bottom-image-wrapper {
+        width: 171.1vw;
     }
 }
 
-@media (min-width: 652px) {
+@media (max-width: 1137px) {
+    .description .container {
+            .description-top p {
+                max-width: 76.98vw;
+            }
+
+        .description-bottom-image-wrapper {
+            @include image-border;
+            margin-top: -14.56vh;
+            overflow: hidden;
+            width: 41.1vw;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+
+            .description-bottom-image {
+                @include image-scale;
+                opacity: 0;
+                animation: fadeUp 0.8s ease forwards;
+            }
+        }
+    }
+}
+
+@media (min-width: 695px) {
     .description {
         .container {
             @include container-size;
@@ -15,7 +38,7 @@
 
         .description-top {
             width: $width;
-            height: 61.2vh;
+            height: 68.2vh;
             background-color: $turquoise-color;
             padding: 6.92vh;
             @include display-flex-center-vertical;
@@ -60,14 +83,14 @@
     }
 }
 
-@media (max-width: 652px) {
+@media (max-width: 695px) {
     .description {
         .container {
             @include container-size;
             background-color: $turquoise-color;
             padding: 10vh;
             @include display-flex-center-horizontal;
-            gap: 20vw;
+            // gap: 20vw;
         }
 
         .description-top {
@@ -98,7 +121,7 @@
         .description-bottom-image-wrapper {
             @include image-border;
             overflow: hidden;
-            width: 71.1vw;
+            max-width: 81.1vw;
             opacity: 0;
             animation: fadeUp 0.8s ease forwards;
 

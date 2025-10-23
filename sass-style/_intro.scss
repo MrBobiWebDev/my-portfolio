@@ -1,4 +1,4 @@
-@media (min-width: 652px) {
+@media (min-width: 784px) {
     .intro {
 
     @media (min-width: 900px) {
@@ -47,7 +47,7 @@
     }
 }
 
-@media (max-width: 652px) {
+@media (max-width: 784px) {
      @media (max-width: 900px) {
         .shadow {
             @include container-size;
@@ -58,26 +58,20 @@
         }
     }
 
-    .container {
-        @include display-flex-center-horizontal;
-        padding-top: 15.3vh;
-        gap: 20vw;
-    }
-
     .intro-top {
         @include display-flex-center-vertical;
-
+        padding-top: 15.3vh;
     }
 
     h1 {
-        @include Headline;
+        @include Headline900;
         text-transform: uppercase;
         margin: 0;
     }
 
     .intro-top-text-wrapper{
-        @include fonts-36-54-400;
-        width: 68.85vw;
+        @include fonts-func(5.3vh, 7vh, 400);
+        width: 180.85vw;
     }
 
     .intro-bottom {
@@ -85,7 +79,7 @@
     }
 
     .intro-image {
-        width: 43.85vw;
+        width: 103.85vw;
         height: auto;
     }
 }

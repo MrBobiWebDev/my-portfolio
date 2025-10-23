@@ -98,3 +98,19 @@
         width: 100vw;
     }
 }
+
+@media (max-width: 735px) {
+    .skills .container {
+        gap: 10vh;
+        .skills-table {
+            width: 130vw;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .skills .container .skills-table {
+        width: 170vw;
+    }
+}

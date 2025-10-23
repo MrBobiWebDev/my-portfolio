@@ -28,6 +28,13 @@
     text-align: center;
 }
 
+@mixin Headline900 {
+    font-size: 8vh;
+    line-height: 10.5vh;
+    font-weight: 700;
+    text-align: center;
+}
+
 @mixin fonts-func ($size, $height, $weight) {
     font-size: $size;
     line-height: $height;
