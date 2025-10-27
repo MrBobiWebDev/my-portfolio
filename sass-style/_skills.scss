@@ -93,9 +93,15 @@
     }
 }
 
-@media (max-width: 1000px) {
-    .skills .container .skills-table {
-        width: 100vw;
+@media (max-width: 900px) {
+    .skills .container { 
+        h2 {
+            @include fonts-func(7vh, 9.5vh, 700);
+        }
+
+        .skills-table {
+            width: 120vw;
+        }
     }
 }
 
@@ -103,7 +109,7 @@
     .skills .container {
         gap: 10vh;
         .skills-table {
-            width: 130vw;
+            width: 140vw;
             margin: 0;
         }
     }

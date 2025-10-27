@@ -1,5 +1,146 @@
-.contacts {
-    .container {
+@media (min-width: 900px) {
+    
+    .contacts {
+        .container {
+            @include container-size;
+            @include display-flex-center-vertical;
+            align-items: none;
+            padding: 0;
+
+            .contacts-top {
+                width: $width;
+                height: 28.52vh;
+                background-color: $turquoise-color;
+                padding: 5.92vh;
+                padding-right: 6.92vh;
+                @include display-flex-center-vertical;
+                justify-content: start;
+                gap: 4.17vh;
+
+                h2 {
+                    @include Headline;
+                    margin: 0;
+                }
+
+                .contacts-top-wrapper {
+                    p {
+                        @include fonts-36-54-400;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .contacts-bottom {
+                @include display-flex-center-horizontal;
+                margin: 0 auto; 
+                margin-top: 9.26vh;
+                gap: 7.08vw;
+
+                .contacts-bottom-left {
+                    width: 33.65vw;
+                    overflow: hidden;
+
+                    img {
+                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .contacts-bottom-right {
+                    form {
+                        @include display-flex-center-vertical-for-contacts;
+                        width: 48.33vw;
+                        gap: 4.44vh;
+
+                        .contacts-form-top {
+                            display: flex;
+                            width: 48.33vw;
+                            gap: 6.88vw;
+
+                            .contacts-form-top-input {
+                                @include display-flex-center-vertical-for-contacts;
+                                gap: 0.93vh;
+                                opacity: 0;
+                                animation: fadeUp 0.8s ease forwards;
+
+                                &:nth-child(1) { animation-delay: 0.2s; }
+                                &:nth-child(2) { animation-delay: 0.4s; }
+
+                                input {
+                                    width: 20.16vw;
+                                    height: 4.85vh;
+                                }
+
+                                label {
+                                    @include fonts-25-36-400;
+                                    text-align: left;
+                                    margin-left: 0.26vw;
+                                }
+                            }
+                        }
+
+                        .contacts-form-input {
+                            @include display-flex-center-vertical-for-contacts;
+                            width: 48.33vw;
+                            gap: 0.93vh;
+                            opacity: 0;
+                            animation: fadeUp 0.8s ease forwards;
+
+                            &:nth-child(1) { animation-delay: 0.8s; }
+
+                            textarea {
+                                height: 31.67vh;
+                                resize: none;
+                                width: 100%;
+                            }
+
+                            label {
+                                @include fonts-25-36-400;
+                                text-align: left;
+                                margin-left: 1.3vw;
+                            }
+                        }
+
+                        .contacts-form-top-input input,
+                        .contacts-form-input textarea {
+                            @include border-1px ($orange-color);
+                            border-radius: 15px;
+                            background: transparent;
+                            padding: 1.1vh 0.5vw;
+                            @include fonts-func (3.4vh, 3.7vh, 400);
+                            text-align: left;
+                        }
+                    }
+                    
+                    .form-button-wrapper {
+                        display: flex;
+                        justify-content: end;
+                        // width: 103%;
+                        margin-top: 4.72vh;
+                        opacity: 0;
+                        animation: fadeUp 0.8s ease forwards;
+
+                        &:nth-child(1) { animation-delay: 1s; }
+
+                        button{
+                            @include button ($orange-color);
+                            @include Git-and-send-contacts;
+                        }
+
+                        button:hover {
+                            @include button-hover ($orange-color, $white-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) and (min-width: 792px) {
+    
+    .contacts {
         @include container-size;
         @include display-flex-center-vertical;
         align-items: none;
@@ -7,7 +148,7 @@
 
         .contacts-top {
             width: $width;
-            height: 28.52vh;
+            height: 31.52vh;
             background-color: $turquoise-color;
             padding: 5.92vh;
             padding-right: 6.92vh;
@@ -16,13 +157,13 @@
             gap: 4.17vh;
 
             h2 {
-                @include Headline;
+                @include fonts-func(7vh, 9.5vh, 700);
                 margin: 0;
             }
 
             .contacts-top-wrapper {
                 p {
-                    @include fonts-36-54-400;
+                    @include fonts-func(4.3vh, 6vh, 400);
                     margin: 0;
                 }
             }
@@ -35,7 +176,7 @@
             gap: 7.08vw;
 
             .contacts-bottom-left {
-                width: 33.65vw;
+                width: 48.65vw;
                 overflow: hidden;
 
                 img {
@@ -48,12 +189,12 @@
             .contacts-bottom-right {
                 form {
                     @include display-flex-center-vertical-for-contacts;
-                    width: 48.33vw;
+                    width: 68.33vw;
                     gap: 4.44vh;
 
                     .contacts-form-top {
                         display: flex;
-                        width: 48.33vw;
+                        width: 68.33vw;
                         gap: 6.88vw;
 
                         .contacts-form-top-input {
@@ -66,7 +207,7 @@
                             &:nth-child(2) { animation-delay: 0.4s; }
 
                             input {
-                                width: 20.16vw;
+                                width: 100%;
                                 height: 4.85vh;
                             }
 
@@ -80,7 +221,7 @@
 
                     .contacts-form-input {
                         @include display-flex-center-vertical-for-contacts;
-                        width: 48.33vw;
+                        width: 100%;
                         gap: 0.93vh;
                         opacity: 0;
                         animation: fadeUp 0.8s ease forwards;
@@ -113,8 +254,7 @@
                 
                 .form-button-wrapper {
                     display: flex;
-                    justify-content: flex-end;
-                    width: 103%;
+                    justify-content: end;
                     margin-top: 4.72vh;
                     opacity: 0;
                     animation: fadeUp 0.8s ease forwards;
@@ -124,6 +264,144 @@
                     button{
                         @include button ($orange-color);
                         @include Git-and-send-contacts;
+                    }
+
+                    button:hover {
+                        @include button-hover ($orange-color, $white-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 792px) {
+    
+    .contacts {
+        @include container-size;
+        @include display-flex-center-vertical;
+        align-items: none;
+        padding: 0;
+
+        .contacts-top {
+            width: $width;
+            height: 31.52vh;
+            background-color: $turquoise-color;
+            padding: 5.92vh;
+            padding-right: 6.92vh;
+            @include display-flex-center-vertical;
+            justify-content: start;
+            gap: 4.17vh;
+
+            h2 {
+                @include fonts-func(7vh, 9.5vh, 700);
+                margin: 0;
+            }
+
+            .contacts-top-wrapper {
+                p {
+                    @include fonts-func(4.3vh, 6vh, 400);
+                    margin: 0;
+                }
+            }
+        }
+
+        .contacts-bottom {
+            @include display-flex-center-horizontal;
+            margin: 0 auto; 
+            margin-top: 9.26vh;
+            gap: 7.08vw;
+
+            .contacts-bottom-left {
+                width: 58.65vw;
+                overflow: hidden;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .contacts-bottom-right {
+                form {
+                    @include display-flex-center-vertical-for-contacts;
+                    width: 68.33vw;
+                    gap: 4.44vh;
+
+                    .contacts-form-top {
+                        display: flex;
+                        width: 68.33vw;
+                        gap: 6.88vw;
+
+                        .contacts-form-top-input {
+                            @include display-flex-center-vertical-for-contacts;
+                            gap: 0.93vh;
+                            opacity: 0;
+                            animation: fadeUp 0.8s ease forwards;
+
+                            &:nth-child(1) { animation-delay: 0.2s; }
+                            &:nth-child(2) { animation-delay: 0.4s; }
+
+                            input {
+                                width: 100%;
+                                height: 4.85vh;
+                            }
+
+                            label {
+                                @include fonts-25-36-400;
+                                text-align: left;
+                                margin-left: 0.26vw;
+                            }
+                        }
+                    }
+
+                    .contacts-form-input {
+                        @include display-flex-center-vertical-for-contacts;
+                        width: 100%;
+                        gap: 0.93vh;
+                        opacity: 0;
+                        animation: fadeUp 0.8s ease forwards;
+
+                        &:nth-child(1) { animation-delay: 0.8s; }
+
+                        textarea {
+                            height: 31.67vh;
+                            resize: none;
+                            width: 100%;
+                        }
+
+                        label {
+                            @include fonts-25-36-400;
+                            text-align: left;
+                            margin-left: 1.3vw;
+                        }
+                    }
+
+                    .contacts-form-top-input input,
+                    .contacts-form-input textarea {
+                        @include border-1px ($orange-color);
+                        border-radius: 15px;
+                        background: transparent;
+                        padding: 1.1vh 0.5vw;
+                        @include fonts-func (3.4vh, 3.7vh, 400);
+                        text-align: left;
+                    }
+                }
+                
+                .form-button-wrapper {
+                    display: flex;
+                    justify-content: end;
+                    margin-top: 4.72vh;
+                    opacity: 0;
+                    animation: fadeUp 0.8s ease forwards;
+
+                    &:nth-child(1) { animation-delay: 1s; }
+
+                    button{
+                        @include button ($orange-color);
+                        @include Git-and-send-contacts;
+                        @include fonts-func(2.79vh, 2.81vh, 600);
                     }
 
                     button:hover {

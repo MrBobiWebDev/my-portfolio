@@ -1,24 +1,11 @@
-@media (min-width: 784px) {
-    .intro {
-
-    @media (min-width: 900px) {
-        .shadow {
-            @include container-size;
-            height: 10.9vh;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 1.56);
-            z-index: 1;
-            position: fixed;
-        }
-    }
-
-    @media (max-width: 900px) {
-        .shadow {
-            @include container-size;
-            height: 9.9vh;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 1.56);
-            z-index: 1;
-            position: fixed;
-        }
+@media (min-width: 900px) {
+    
+    .shadow {
+        @include container-size;
+        height: 11.5vh;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .56);
+        z-index: 1;
+        position: fixed;
     }
 
     .intro-top {
@@ -44,18 +31,16 @@
         width: 33.85vw;
         height: auto;
     }
-    }
 }
 
-@media (max-width: 784px) {
-     @media (max-width: 900px) {
-        .shadow {
-            @include container-size;
-            height: 9.9vh;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 1.56);
-            z-index: 1;
-            position: fixed;
-        }
+@media (max-width: 900px) and (min-width: 792px) {
+    
+    .shadow {
+        @include container-size;
+        height: 10.5vh;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .56);
+        z-index: 1;
+        position: fixed;
     }
 
     .intro-top {
@@ -64,14 +49,13 @@
     }
 
     h1 {
-        @include Headline900;
+        @include fonts-func(7vh, 9.5vh, 700);
         text-transform: uppercase;
-        margin: 0;
     }
 
     .intro-top-text-wrapper{
-        @include fonts-func(5.3vh, 7vh, 400);
-        width: 180.85vw;
+        @include fonts-func(4.3vh, 6vh, 400);
+        width: 68.85vw;
     }
 
     .intro-bottom {
@@ -79,7 +63,42 @@
     }
 
     .intro-image {
-        width: 103.85vw;
+        width: 53.85vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 792px) {
+    
+    .shadow {
+        @include container-size;
+        height: 10.5vh;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .56);
+        z-index: 1;
+        position: fixed;
+    }
+
+    .intro-top {
+        @include display-flex-center-vertical;
+        padding-top: 15.3vh;
+    }
+
+    h1 {
+        @include fonts-func(7vh, 9.5vh, 700);
+        text-transform: uppercase;
+    }
+
+    .intro-top-text-wrapper{
+        @include fonts-func(4.3vh, 6vh, 400);
+        width: 88.85vw;
+    }
+
+    .intro-bottom {
+        @include display-flex-center-horizontal;
+    }
+
+    .intro-image {
+        width: 73.85vw;
         height: auto;
     }
 }

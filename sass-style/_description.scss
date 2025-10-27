@@ -1,33 +1,4 @@
-@media (max-width: 1168px) {
-    .description-bottom-image-wrapper {
-        width: 171.1vw;
-    }
-}
-
-@media (max-width: 1137px) {
-    .description .container {
-            .description-top p {
-                max-width: 76.98vw;
-            }
-
-        .description-bottom-image-wrapper {
-            @include image-border;
-            margin-top: -14.56vh;
-            overflow: hidden;
-            width: 41.1vw;
-            opacity: 0;
-            animation: fadeUp 0.8s ease forwards;
-
-            .description-bottom-image {
-                @include image-scale;
-                opacity: 0;
-                animation: fadeUp 0.8s ease forwards;
-            }
-        }
-    }
-}
-
-@media (min-width: 695px) {
+@media (min-width: 900px) {
     .description {
         .container {
             @include container-size;
@@ -55,7 +26,7 @@
             p {
                 @include fonts-36-54-400;
                 height: 15vh;
-                max-width: 46.98vw;
+                width: 46.98vw;
                 margin: 3.7vh;
                 opacity: 0;
                 animation: fadeUp 0.8s ease forwards;
@@ -83,25 +54,25 @@
     }
 }
 
-@media (max-width: 695px) {
+@media (max-width: 900px) and (min-width: 792px) {
     .description {
         .container {
             @include container-size;
-            background-color: $turquoise-color;
-            padding: 10vh;
-            @include display-flex-center-horizontal;
-            // gap: 20vw;
+            @include display-flex-center-vertical;
+            padding: 0;
+            padding-top: 4.5vh;
         }
 
         .description-top {
-            width: 110vw;
+            width: $width;
+            height: 78.2vh;
             background-color: $turquoise-color;
+            padding: 6.92vh;
             @include display-flex-center-vertical;
 
             h2 {
-                @include Headline;
+                @include fonts-func(7vh, 9.5vh, 700);
                 margin-bottom: 3.7vh;
-                // width: 110vw;
                 text-transform: uppercase;
                 margin: 0;    
                 opacity: 0;
@@ -109,9 +80,9 @@
             }
 
             p {
-                @include fonts-36-54-400;
-                // height: 25vh;
-                min-width: 120vw;
+                @include fonts-func(4.3vh, 6vh, 400);
+                height: 15vh;
+                width: 86.98vw;
                 margin: 3.7vh;
                 opacity: 0;
                 animation: fadeUp 0.8s ease forwards;
@@ -120,8 +91,65 @@
         
         .description-bottom-image-wrapper {
             @include image-border;
+            margin-top: -13.56vh;
             overflow: hidden;
-            max-width: 81.1vw;
+            width: 51.1vw;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+
+            .description-bottom-image {
+                @include image-scale;
+                opacity: 0;
+                animation: fadeUp 0.8s ease forwards;
+            }
+        }
+
+        h2:nth-child(1) {animation-delay: 0.2s;}
+        p:nth-child(2) {animation-delay: 0.4s;}
+        .description-bottom-image-wrapper, .description-bottom-image:nth-child(3) {animation-delay: 0.6s;}
+    }
+}
+
+@media (max-width: 792px) {
+    .description {
+        .container {
+            @include container-size;
+            @include display-flex-center-vertical;
+            padding: 0;
+            padding-top: 4.5vh;
+        }
+
+        .description-top {
+            width: $width;
+            height: 68.2vh;
+            background-color: $turquoise-color;
+            padding: 6.92vh;
+            @include display-flex-center-vertical;
+
+            h2 {
+                @include fonts-func(7vh, 9.5vh, 700);
+                margin-bottom: 3.7vh;
+                text-transform: uppercase;
+                margin: 0;    
+                opacity: 0;
+                animation: fadeUp 0.8s ease forwards;
+            }
+
+            p {
+                @include fonts-func(4.3vh, 6vh, 400);
+                height: 12vh;
+                width: 146.98vw;
+                margin: 3.7vh;
+                opacity: 0;
+                animation: fadeUp 0.8s ease forwards;
+            }
+        }
+        
+        .description-bottom-image-wrapper {
+            @include image-border;
+            margin-top: -10.56vh;
+            overflow: hidden;
+            width: 71.1vw;
             opacity: 0;
             animation: fadeUp 0.8s ease forwards;
 

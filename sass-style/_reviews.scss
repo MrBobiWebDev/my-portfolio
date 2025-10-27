@@ -1,88 +1,91 @@
-.reviews {
-    .container {
-        margin-top: 10vh;
-        @include display-flex-center-vertical;
-        opacity: 0;
-        animation: fadeUp 0.8s ease forwards;
-
-        &:nth-child(1) { animation-delay: 0.2s; }
-
-        h2 {
-            @include Headline;
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        .reviews-text-wrapper {
-            @include fonts-36-54-400;
-            width: 28.65vw;
-            margin-top: 5.93vh;
-            margin-bottom: 2.32vh;
-        }
-
-        .reviews-item {
+@media (min-width: 900px) {
+    
+    .reviews {
+        .container {
+            margin-top: 10vh;
             @include display-flex-center-vertical;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
 
-            .reviews-item-image-wrapper {
-                overflow: hidden;
-                width: 16.35vw;
-                height: 21.85vh;
-                @include display-flex-center-horizontal;
-                @include image-border;
+            &:nth-child(1) { animation-delay: 0.2s; }
 
-                .reviews-item-image {
-                    @include image-scale;
-                }
-            }
-
-            p {
-                @include fonts-36-54-400;
-                @include display-flex-center-vertical;
-            }
-
-            .reviews-item-text-wrapper {
-                margin-top: 6.57vh;
-                margin-bottom: 4.63vh;
-            }
-
-            form {
-                @include display-flex-center-vertical;
-            }
-
-            figure {
+            h2 {
+                @include Headline;
+                text-transform: uppercase;
                 margin: 0;
+            }
+
+            .reviews-text-wrapper {
+                @include fonts-36-54-400;
+                width: 28.65vw;
+                margin-top: 5.93vh;
+                margin-bottom: 2.32vh;
+            }
+
+            .reviews-item {
                 @include display-flex-center-vertical;
 
+                .reviews-item-image-wrapper {
+                    overflow: hidden;
+                    width: 16.35vw;
+                    height: 21.85vh;
+                    @include display-flex-center-horizontal;
+                    @include image-border;
 
-                .reviews-figcaption {
-                    margin-bottom: 3.7vh;
-
-                    figcaption {
-                        @include fonts-func (1.8vh, 2.7vh, 400);
-                        @include display-flex-center-vertical;
+                    .reviews-item-image {
+                        @include image-scale;
                     }
                 }
-            }
 
-            .reviews-buttons-wrapper {
-                display: flex;
-                margin-bottom: 4.17vh;
-                gap: 0.52vw;
+                p {
+                    @include fonts-36-54-400;
+                    @include display-flex-center-vertical;
+                }
 
-                button {
-                    border: 3px solid $orange-color;
-                    border-radius: 25px;
-                    background-color: $white-color;
-                    height: 3.7vh;
-                    overflow: hidden;
-                    @include display-flex-center-horizontal;
-                    cursor: pointer;
+                .reviews-item-text-wrapper {
+                    margin-top: 6.57vh;
+                    margin-bottom: 4.63vh;
+                }
+
+                form {
+                    @include display-flex-center-vertical;
+                }
+
+                figure {
                     margin: 0;
+                    @include display-flex-center-vertical;
 
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: contain;
+
+                    .reviews-figcaption {
+                        margin-bottom: 3.7vh;
+
+                        figcaption {
+                            @include fonts-func (1.8vh, 2.7vh, 400);
+                            @include display-flex-center-vertical;
+                        }
+                    }
+                }
+
+                .reviews-buttons-wrapper {
+                    display: flex;
+                    margin-bottom: 4.17vh;
+                    gap: 0.52vw;
+
+                    button {
+                        border: 3px solid $orange-color;
+                        border-radius: 25px;
+                        background-color: $white-color;
+                        height: 3.7vh;
+                        overflow: hidden;
+                        @include display-flex-center-horizontal;
+                        cursor: pointer;
+                        margin: 0;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: contain;
+                        }
                     }
                 }
             }
@@ -94,5 +97,95 @@
     .reviews .container .reviews-text-wrapper {
         width: 38.65vw;
         margin-top: 4.93vh;
+    }
+}
+
+@media (max-width: 900px) {
+    
+    .reviews {
+        .container {
+            margin-top: 10vh;
+            @include display-flex-center-vertical;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+
+            &:nth-child(1) { animation-delay: 0.2s; }
+
+            h2 {
+                @include fonts-func(7vh, 9.5vh, 700);
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            .reviews-text-wrapper {
+                @include fonts-func(4.3vh, 6vh, 400);
+                width: 88.65vw;
+                margin-top: 3.93vh;
+                margin-bottom: 2.32vh;
+            }
+
+            .reviews-item {
+                @include display-flex-center-vertical;
+
+                .reviews-item-image-wrapper {
+                    overflow: hidden;
+                    @include image-border;
+                    width: 36.35vw;
+                    height: 32.85vh;
+                    @include display-flex-center-horizontal;
+
+                    .reviews-item-image {
+                        height: 33.85vh;
+                    }
+                }
+
+                p {
+                    @include fonts-func(4.3vh, 6vh, 400);
+                    @include display-flex-center-vertical;
+                }
+
+                form {
+                    @include display-flex-center-vertical;
+                }
+
+                figure {
+                    margin: 0;
+                    @include display-flex-center-vertical;
+
+
+                    .reviews-figcaption {
+                        margin-bottom: 3.7vh;
+
+                        figcaption {
+                            @include fonts-func (3.2vh, 4.2vh, 400);
+                            @include display-flex-center-vertical;
+                        }
+                    }
+                }
+
+                .reviews-buttons-wrapper {
+                    display: flex;
+                    margin-bottom: 4.17vh;
+                    gap: 0.52vw;
+
+                    button {
+                        border: 3px solid $orange-color;
+                        border-radius: 25px;
+                        background-color: $white-color;
+                        height: 3.7vh;
+                        overflow: hidden;
+                        @include display-flex-center-horizontal;
+                        cursor: pointer;
+                        margin: 0;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
