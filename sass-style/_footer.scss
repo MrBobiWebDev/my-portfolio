@@ -233,7 +233,7 @@
     }
 }
 
-@media (max-width: 792px) {
+@media (max-width: 792px) and (min-width: 600px) {
     
     footer {
         .container {
@@ -269,7 +269,116 @@
                 }
 
                 button {
-                    @include fonts-func(2.8vh, 4.2vh, 400);
+                    @include fonts-func(2.3vh, 2.5vh, 400);
+                    @include button ($white-color);
+                    background-color: $violet-color;
+                    border-radius: 12px;
+                    padding: 1.39vh 1.56vw;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    @include button-hover($white-color, $violet-color)
+                }
+            }
+
+            .footer-bottom {
+                width: $width;
+                background-color: $turquoise-color;
+                height: 54.52vh;
+                margin-top: -8.79vh;
+                position: relative;
+                @include display-flex-center-vertical;
+                justify-content: center;
+                gap: 2.33vh;
+                padding: 14.35vh 0 2.17vh 0;
+
+                .footer-bottom-images-authors{
+                    @include display-flex-center-vertical;
+                    margin: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: $black-color;
+                        @include fonts-func (1.48vh, 2.5vh, 400);
+                    }
+                }
+
+                .footer-bottom-icons {
+                    display: flex;
+                    gap: 1.55vw;
+
+                    .footer-bottom-item {
+                        border: 0.09vw solid $blue-color;
+                        border-radius: 50%;
+                        width: 4.35vh;
+                        height: 4.05vh;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-top: 5px;
+
+                        .tg {
+                            width: 30.40087890625px;  
+                            object-fit: contain;
+                        }
+
+                        .habr {
+                            padding-top: 0.2vh;
+                            width: 28px;  
+                            object-fit: contain;
+                        }
+
+                        .email {
+                            padding-top: 0.2vh;
+                            width: 31px;  
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    
+    footer {
+        .container {
+            @include container-size;
+            @include display-flex-center-vertical;
+            padding: 0;
+
+            .footer-top {
+                @include display-flex-center-horizontal;
+                justify-content: space-between;
+                background-color: $violet-color;
+                border-radius: 12px;
+                width: 150vw;
+                position: relative;
+                z-index: 2;
+                padding: 1vh 3.39vw;
+                height: 17.59vh;
+
+                h4 {
+                    @include fonts-func(3.37vh, 4.17vh, 700);
+                    width: 32.42vw;
+                    color: $white-color;
+                }
+
+                .footer-top-text-wrapper {
+                    text-align: center;
+                    width: 44.1vw;
+
+                    p {
+                        @include footer-font;
+                        @include fonts-func(2.7vh, 2.8vh, 700);
+                    }
+                }
+
+                button {
+                    @include fonts-func(3.3vh, 3.5vh, 400);
                     @include button ($white-color);
                     background-color: $violet-color;
                     border-radius: 12px;
